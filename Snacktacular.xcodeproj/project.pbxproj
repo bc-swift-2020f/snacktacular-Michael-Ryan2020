@@ -15,6 +15,9 @@
 		E81882812547B98400B24F73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81882802547B98400B24F73 /* Assets.xcassets */; };
 		E81882842547B98400B24F73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81882822547B98400B24F73 /* LaunchScreen.storyboard */; };
 		E8B9E2432547BD6900D3D8AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8B9E2422547BD6900D3D8AC /* GoogleService-Info.plist */; };
+		E8B9E245254866E700D3D8AC /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9E244254866E700D3D8AC /* SpotListViewController.swift */; };
+		E8B9E2472548682400D3D8AC /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9E2462548682400D3D8AC /* SpotTableViewCell.swift */; };
+		E8B9E24925486C2400D3D8AC /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9E24825486C2400D3D8AC /* SpotDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		E81882832547B98400B24F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E81882852547B98400B24F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8B9E2422547BD6900D3D8AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E8B9E244254866E700D3D8AC /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
+		E8B9E2462548682400D3D8AC /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
+		E8B9E24825486C2400D3D8AC /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,9 @@
 				E81882772547B98100B24F73 /* AppDelegate.swift */,
 				E81882792547B98100B24F73 /* SceneDelegate.swift */,
 				E818827B2547B98100B24F73 /* LoginViewController.swift */,
+				E8B9E244254866E700D3D8AC /* SpotListViewController.swift */,
+				E8B9E2462548682400D3D8AC /* SpotTableViewCell.swift */,
+				E8B9E24825486C2400D3D8AC /* SpotDetailViewController.swift */,
 				E818827D2547B98100B24F73 /* Main.storyboard */,
 				E81882802547B98400B24F73 /* Assets.xcassets */,
 				E81882822547B98400B24F73 /* LaunchScreen.storyboard */,
@@ -228,8 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8B9E245254866E700D3D8AC /* SpotListViewController.swift in Sources */,
 				E818827C2547B98100B24F73 /* LoginViewController.swift in Sources */,
 				E81882782547B98100B24F73 /* AppDelegate.swift in Sources */,
+				E8B9E24925486C2400D3D8AC /* SpotDetailViewController.swift in Sources */,
+				E8B9E2472548682400D3D8AC /* SpotTableViewCell.swift in Sources */,
 				E818827A2547B98100B24F73 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
