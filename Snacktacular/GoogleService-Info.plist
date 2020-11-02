@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>955915423884-6s6597u6pmkon9gmpom10cq2jauofupe.apps.googleusercontent.com</string>
+	<string>91906802870-tjif8tad75mt1mc45nav59p8lb4t3uu9.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.955915423884-6s6597u6pmkon9gmpom10cq2jauofupe</string>
+	<string>com.googleusercontent.apps.91906802870-tjif8tad75mt1mc45nav59p8lb4t3uu9</string>
 	<key>API_KEY</key>
-	<string>AIzaSyC-IaaVdciaL_rOkQ_2-FhhnRDTbCkWlQw</string>
+	<string>AIzaSyCNSwO89jDz2Y02ES4m1e3ro7jZWILeK8E</string>
 	<key>GCM_SENDER_ID</key>
-	<string>955915423884</string>
+	<string>91906802870</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.MichaelRyan.Snacktacular</string>
 	<key>PROJECT_ID</key>
-	<string>snacktacular-49414</string>
+	<string>snacktacular-706fe</string>
 	<key>STORAGE_BUCKET</key>
-	<string>snacktacular-49414.appspot.com</string>
+	<string>snacktacular-706fe.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:955915423884:ios:bf20a8280943ed5579aba9</string>
+	<string>1:91906802870:ios:f7eaa354e376e5f0921217</string>
 	<key>DATABASE_URL</key>
-	<string>https://snacktacular-49414.firebaseio.com</string>
+	<string>https://snacktacular-706fe.firebaseio.com</string>
 </dict>
 </plist>

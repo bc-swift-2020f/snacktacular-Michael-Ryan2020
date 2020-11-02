@@ -106,7 +106,7 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" id="fiu-TO-9AH">
-                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Pfi-rf-eIS">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Pfi-rf-eIS">
                                 <rect key="frame" x="20" y="10.5" width="374" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="PrimaryColor"/>
@@ -238,13 +238,19 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1AV-3d-n3C">
+                                        <rect key="frame" x="0.0" y="62" width="414" height="180"/>
+                                    </mapView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="qqa-Xq-i5U" firstAttribute="top" secondItem="III-zt-P8f" secondAttribute="bottom" constant="2" id="3yi-cZ-fMc"/>
+                                    <constraint firstItem="fZf-dV-zpS" firstAttribute="top" secondItem="1AV-3d-n3C" secondAttribute="bottom" id="8HN-ez-zpX"/>
                                     <constraint firstItem="qqa-Xq-i5U" firstAttribute="leading" secondItem="bMj-zU-sXI" secondAttribute="leading" constant="8" id="90h-vc-fSn"/>
                                     <constraint firstItem="rzR-8H-Y4L" firstAttribute="leading" secondItem="aXt-Xn-wm7" secondAttribute="trailing" id="ES8-xE-VfQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="1AV-3d-n3C" secondAttribute="trailing" id="FXP-Rx-JcH"/>
                                     <constraint firstItem="aXt-Xn-wm7" firstAttribute="leading" secondItem="bMj-zU-sXI" secondAttribute="leading" constant="8" id="HiW-y7-qYq"/>
+                                    <constraint firstItem="1AV-3d-n3C" firstAttribute="leading" secondItem="bMj-zU-sXI" secondAttribute="leading" id="Jwf-ho-MCo"/>
                                     <constraint firstItem="fZf-dV-zpS" firstAttribute="top" secondItem="bMj-zU-sXI" secondAttribute="top" constant="242" id="MVS-Os-Bq2"/>
                                     <constraint firstItem="fZf-dV-zpS" firstAttribute="leading" secondItem="bMj-zU-sXI" secondAttribute="leading" id="QCz-6F-aFY"/>
                                     <constraint firstAttribute="trailing" secondItem="fZf-dV-zpS" secondAttribute="trailing" id="Sd2-4d-vCY"/>
@@ -257,6 +263,7 @@
                                     <constraint firstItem="aXt-Xn-wm7" firstAttribute="top" secondItem="fZf-dV-zpS" secondAttribute="bottom" constant="8" id="fd2-Sf-Y8P"/>
                                     <constraint firstItem="rzR-8H-Y4L" firstAttribute="top" secondItem="fZf-dV-zpS" secondAttribute="bottom" constant="6" id="jE6-EM-yI6"/>
                                     <constraint firstAttribute="trailing" secondItem="III-zt-P8f" secondAttribute="trailing" constant="8" id="mIG-VF-EEy"/>
+                                    <constraint firstItem="1AV-3d-n3C" firstAttribute="top" secondItem="qqa-Xq-i5U" secondAttribute="bottom" constant="2" id="t1j-9P-tpP"/>
                                     <constraint firstAttribute="trailing" secondItem="III-zt-P8f" secondAttribute="trailing" constant="8" id="tTc-kg-UyI"/>
                                     <constraint firstItem="III-zt-P8f" firstAttribute="top" secondItem="bMj-zU-sXI" secondAttribute="top" constant="8" id="tk4-7l-wBM"/>
                                     <constraint firstItem="FP8-lY-cFC" firstAttribute="top" secondItem="fZf-dV-zpS" secondAttribute="bottom" constant="4" id="tl8-ej-YaN"/>
@@ -275,18 +282,28 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="2ku-5U-vZi"/>
-                        <barButtonItem title="Lookup Place" id="O7S-4p-hh0"/>
+                        <barButtonItem title="Lookup Place" id="O7S-4p-hh0">
+                            <connections>
+                                <action selector="locationButtonPressed:" destination="pac-Eg-ZHO" id="CHD-jU-bRI"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="M21-IS-G4w">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Vd9-h3-fAy">
                             <connections>
-                                <action selector="cancelButtonPressed:" destination="pac-Eg-ZHO" id="Iuy-Vh-Cfr"/>
+                                <action selector="cancelButtonPressed:" destination="pac-Eg-ZHO" id="ihe-or-EOd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="TaV-sz-Llc">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="pac-Eg-ZHO" id="i3L-z5-MeF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressTextField" destination="qqa-Xq-i5U" id="Aj9-8n-6by"/>
+                        <outlet property="mapView" destination="1AV-3d-n3C" id="KPc-bY-efk"/>
                         <outlet property="nameTextField" destination="III-zt-P8f" id="42g-Ja-uW6"/>
                         <outlet property="ratingLabel" destination="rzR-8H-Y4L" id="GWY-50-8Me"/>
                     </connections>
@@ -369,7 +386,7 @@
         <image name="camera.fill" catalog="system" width="128" height="96"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="PrimaryColor">
-            <color red="1" green="0.50528764719999997" blue="0.29274243119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.50588235294117645" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
