@@ -22,6 +22,7 @@
 		E8B9E251254B13A700D3D8AC /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9E250254B13A700D3D8AC /* UIViewController+alert.swift */; };
 		E8B9E253254F3E4800D3D8AC /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9E252254F3E4800D3D8AC /* Spots.swift */; };
 		E8B9E255254F4C5E00D3D8AC /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9E254254F4C5E00D3D8AC /* APIKeys.swift */; };
+		E8B9E27D2553A79700D3D8AC /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9E27C2553A79700D3D8AC /* ReviewTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E8B9E250254B13A700D3D8AC /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 		E8B9E252254F3E4800D3D8AC /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
 		E8B9E254254F4C5E00D3D8AC /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		E8B9E27C2553A79700D3D8AC /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				E8B9E244254866E700D3D8AC /* SpotListViewController.swift */,
 				E8B9E2462548682400D3D8AC /* SpotTableViewCell.swift */,
 				E8B9E24825486C2400D3D8AC /* SpotDetailViewController.swift */,
+				E8B9E27C2553A79700D3D8AC /* ReviewTableViewController.swift */,
 				E818827D2547B98100B24F73 /* Main.storyboard */,
 				E81882802547B98400B24F73 /* Assets.xcassets */,
 				E81882822547B98400B24F73 /* LaunchScreen.storyboard */,
@@ -253,6 +256,7 @@
 				E818827C2547B98100B24F73 /* LoginViewController.swift in Sources */,
 				E81882782547B98100B24F73 /* AppDelegate.swift in Sources */,
 				E8B9E24925486C2400D3D8AC /* SpotDetailViewController.swift in Sources */,
+				E8B9E27D2553A79700D3D8AC /* ReviewTableViewController.swift in Sources */,
 				E8B9E253254F3E4800D3D8AC /* Spots.swift in Sources */,
 				E8B9E2472548682400D3D8AC /* SpotTableViewCell.swift in Sources */,
 				E8B9E255254F4C5E00D3D8AC /* APIKeys.swift in Sources */,

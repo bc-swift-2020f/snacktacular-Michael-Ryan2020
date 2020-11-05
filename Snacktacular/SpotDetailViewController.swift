@@ -28,6 +28,10 @@ class SpotDetailViewController: UIViewController {
     var reviews: [String] = ["Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
         tableView.delegate = self
         tableView.dataSource = self
         getLocation()
@@ -85,6 +89,11 @@ class SpotDetailViewController: UIViewController {
         present(autocompleteController, animated: true, completion: nil)
         
     }
+    
+    @IBAction func ratingButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "AddReview", sender: nil)
+    }
+    
 }
 
 extension SpotDetailViewController: GMSAutocompleteViewControllerDelegate {
@@ -107,6 +116,8 @@ extension SpotDetailViewController: GMSAutocompleteViewControllerDelegate {
   func wasCancelled(_ viewController: GMSAutocompleteViewController) {
     dismiss(animated: true, completion: nil)
   }
+    
+    
 }
 extension SpotDetailViewController: CLLocationManagerDelegate {
     func getLocation() {
