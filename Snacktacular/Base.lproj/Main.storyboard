@@ -163,14 +163,19 @@
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restaraunt Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="III-zt-P8f">
                                             <rect key="frame" x="8" y="8" width="398" height="33"/>
+                                            <color key="backgroundColor" name="UIElementBackground"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="33" id="48T-rP-lGs"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="24"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="nameFieldChanged:" destination="pac-Eg-ZHO" eventType="editingChanged" id="nee-5Z-u47"/>
+                                            </connections>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="address" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qqa-Xq-i5U">
                                             <rect key="frame" x="8" y="43" width="398" height="17"/>
+                                            <color key="backgroundColor" name="UIElementBackground"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="N4W-3i-G3M"/>
                                             </constraints>
@@ -399,13 +404,13 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="M21-IS-G4w">
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="M21-IS-G4w">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Vd9-h3-fAy">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="pac-Eg-ZHO" id="ihe-or-EOd"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="TaV-sz-Llc">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="TaV-sz-Llc">
                             <connections>
                                 <action selector="saveButtonPressed:" destination="pac-Eg-ZHO" id="i3L-z5-MeF"/>
                             </connections>
@@ -414,9 +419,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressTextField" destination="qqa-Xq-i5U" id="Aj9-8n-6by"/>
+                        <outlet property="cancelBarButton" destination="Vd9-h3-fAy" id="5bw-zD-Roi"/>
                         <outlet property="mapView" destination="1AV-3d-n3C" id="KPc-bY-efk"/>
                         <outlet property="nameTextField" destination="III-zt-P8f" id="42g-Ja-uW6"/>
                         <outlet property="ratingLabel" destination="rzR-8H-Y4L" id="GWY-50-8Me"/>
+                        <outlet property="saveBarButton" destination="TaV-sz-Llc" id="xUB-iv-8nu"/>
                         <outlet property="tableView" destination="vqP-qg-ooe" id="a2e-ze-Mrz"/>
                         <segue destination="j7M-IT-1wE" kind="presentation" identifier="AddReview" modalPresentationStyle="fullScreen" id="nzJ-WV-KK0"/>
                     </connections>
@@ -509,7 +516,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="7VY-g4-rQ6">
                                                     <rect key="frame" x="103" y="29" width="208" height="40"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVh-7O-K33">
+                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVh-7O-K33">
                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                             <color key="backgroundColor" name="UIElementBackground"/>
                                                             <constraints>
@@ -524,7 +531,7 @@
                                                                 <action selector="starButtonPressed:" destination="AA9-Py-svg" eventType="touchUpInside" id="A1t-eN-Cx8"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="1" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IY-IV-idX">
+                                                        <button opaque="NO" tag="1" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IY-IV-idX">
                                                             <rect key="frame" x="42" y="0.0" width="40" height="40"/>
                                                             <color key="backgroundColor" name="UIElementBackground"/>
                                                             <constraints>
@@ -539,7 +546,7 @@
                                                                 <action selector="starButtonPressed:" destination="AA9-Py-svg" eventType="touchUpInside" id="VP8-Ds-LMb"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="2" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2f-Le-vnu">
+                                                        <button opaque="NO" tag="2" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2f-Le-vnu">
                                                             <rect key="frame" x="84" y="0.0" width="40" height="40"/>
                                                             <color key="backgroundColor" name="UIElementBackground"/>
                                                             <constraints>
@@ -554,7 +561,7 @@
                                                                 <action selector="starButtonPressed:" destination="AA9-Py-svg" eventType="touchUpInside" id="Q7P-be-EXQ"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="3" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrQ-FD-fYU">
+                                                        <button opaque="NO" tag="3" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrQ-FD-fYU">
                                                             <rect key="frame" x="126" y="0.0" width="40" height="40"/>
                                                             <color key="backgroundColor" name="UIElementBackground"/>
                                                             <constraints>
@@ -569,7 +576,7 @@
                                                                 <action selector="starButtonPressed:" destination="AA9-Py-svg" eventType="touchUpInside" id="6k1-fD-WhL"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="4" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxu-BZ-fPn">
+                                                        <button opaque="NO" tag="4" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxu-BZ-fPn">
                                                             <rect key="frame" x="168" y="0.0" width="40" height="40"/>
                                                             <color key="backgroundColor" name="UIElementBackground"/>
                                                             <constraints>
@@ -614,7 +621,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kX9-N7-HEP">
-                                                    <rect key="frame" x="8" y="12" width="82" height="24"/>
+                                                    <rect key="frame" x="8" y="10" width="82" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="82" id="6UA-Qz-XaP"/>
                                                         <constraint firstAttribute="height" constant="24" id="JCg-vl-UgF"/>
@@ -624,7 +631,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title of Review" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hhC-PX-RCf">
-                                                    <rect key="frame" x="93" y="5" width="313" height="34"/>
+                                                    <rect key="frame" x="98" y="5" width="308" height="34"/>
                                                     <color key="backgroundColor" name="UIElementBackground"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="UaR-8h-jGa"/>
@@ -639,8 +646,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="hhC-PX-RCf" firstAttribute="top" secondItem="vFC-XH-aBe" secondAttribute="top" constant="5" id="36B-xP-5kq"/>
-                                                <constraint firstItem="hhC-PX-RCf" firstAttribute="leading" secondItem="kX9-N7-HEP" secondAttribute="trailing" constant="3" id="9a3-Py-S7L"/>
-                                                <constraint firstItem="kX9-N7-HEP" firstAttribute="top" secondItem="vFC-XH-aBe" secondAttribute="top" constant="12" id="Oju-0H-hZv"/>
+                                                <constraint firstItem="hhC-PX-RCf" firstAttribute="leading" secondItem="kX9-N7-HEP" secondAttribute="trailing" constant="8" id="9a3-Py-S7L"/>
+                                                <constraint firstItem="kX9-N7-HEP" firstAttribute="top" secondItem="vFC-XH-aBe" secondAttribute="top" constant="10" id="Oju-0H-hZv"/>
                                                 <constraint firstAttribute="trailing" secondItem="hhC-PX-RCf" secondAttribute="trailing" constant="8" id="S1V-Wo-G6u"/>
                                                 <constraint firstItem="kX9-N7-HEP" firstAttribute="leading" secondItem="vFC-XH-aBe" secondAttribute="leading" constant="8" id="bsj-oE-Jwe"/>
                                             </constraints>
@@ -678,13 +685,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="You're amazing review of awesomeness will go here. I hope it helps your customers find eats" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xys-OB-C2c">
-                                                    <rect key="frame" x="28" y="50" width="358" height="240"/>
+                                                    <rect key="frame" x="28" y="50" width="358" height="220"/>
                                                     <color key="backgroundColor" name="UIElementBackground"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="240" id="x8n-5J-W4b"/>
-                                                    </constraints>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
@@ -696,6 +700,7 @@
                                                 <constraint firstItem="Xys-OB-C2c" firstAttribute="top" secondItem="ggb-U5-O4N" secondAttribute="bottom" constant="3" id="meH-6z-fUp"/>
                                                 <constraint firstItem="ggb-U5-O4N" firstAttribute="top" secondItem="a43-5a-f5w" secondAttribute="topMargin" constant="12" id="rlg-tq-t6J"/>
                                                 <constraint firstItem="Xys-OB-C2c" firstAttribute="leading" secondItem="a43-5a-f5w" secondAttribute="leadingMargin" constant="8" id="xfy-cb-Ho8"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xys-OB-C2c" secondAttribute="bottom" constant="8" id="zb6-Zc-U6X"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -745,7 +750,7 @@
                                 <action selector="cancelButtonPressed:" destination="AA9-Py-svg" id="Fep-ck-qaS"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="vWH-TG-AAw">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="vWH-TG-AAw">
                             <connections>
                                 <action selector="saveButtonPressed:" destination="AA9-Py-svg" id="dte-8A-ThB"/>
                             </connections>
@@ -876,7 +881,7 @@
             <color red="1" green="0.50588235294117645" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="UIElementBackground">
-            <color red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92100000381469727" green="0.92100000381469727" blue="0.92100000381469727" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

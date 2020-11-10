@@ -14,6 +14,8 @@
 		E818827F2547B98100B24F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E818827D2547B98100B24F73 /* Main.storyboard */; };
 		E81882812547B98400B24F73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81882802547B98400B24F73 /* Assets.xcassets */; };
 		E81882842547B98400B24F73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81882822547B98400B24F73 /* LaunchScreen.storyboard */; };
+		E81A82AE255AF9A8009CD33D /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A82AD255AF9A8009CD33D /* UIView+addBorder.swift */; };
+		E81A82B0255AFAC9009CD33D /* UIBarButtonItem+hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A82AF255AFAC9009CD33D /* UIBarButtonItem+hide.swift */; };
 		E8B9E245254866E700D3D8AC /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9E244254866E700D3D8AC /* SpotListViewController.swift */; };
 		E8B9E2472548682400D3D8AC /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9E2462548682400D3D8AC /* SpotTableViewCell.swift */; };
 		E8B9E24925486C2400D3D8AC /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9E24825486C2400D3D8AC /* SpotDetailViewController.swift */; };
@@ -40,6 +42,8 @@
 		E81882802547B98400B24F73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E81882832547B98400B24F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E81882852547B98400B24F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E81A82AD255AF9A8009CD33D /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
+		E81A82AF255AFAC9009CD33D /* UIBarButtonItem+hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+hide.swift"; sourceTree = "<group>"; };
 		E8B9E244254866E700D3D8AC /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
 		E8B9E2462548682400D3D8AC /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
 		E8B9E24825486C2400D3D8AC /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				E81882852547B98400B24F73 /* Info.plist */,
 				E8B9E24E254B086200D3D8AC /* GoogleService-Info.plist */,
 				E8B9E250254B13A700D3D8AC /* UIViewController+alert.swift */,
+				E81A82AD255AF9A8009CD33D /* UIView+addBorder.swift */,
+				E81A82AF255AFAC9009CD33D /* UIBarButtonItem+hide.swift */,
 				E8B9E254254F4C5E00D3D8AC /* APIKeys.swift */,
 			);
 			path = Snacktacular;
@@ -269,12 +275,14 @@
 				E8B9E27D2553A79700D3D8AC /* ReviewTableViewController.swift in Sources */,
 				E8B9E27F25544D9E00D3D8AC /* Review.swift in Sources */,
 				E8B9E253254F3E4800D3D8AC /* Spots.swift in Sources */,
+				E81A82B0255AFAC9009CD33D /* UIBarButtonItem+hide.swift in Sources */,
 				E8B9E2472548682400D3D8AC /* SpotTableViewCell.swift in Sources */,
 				E8B9E2832558665F00D3D8AC /* SpotReviewTableViewCell.swift in Sources */,
 				E8B9E255254F4C5E00D3D8AC /* APIKeys.swift in Sources */,
 				E8B9E24B254A08DF00D3D8AC /* Spot.swift in Sources */,
 				E818827A2547B98100B24F73 /* SceneDelegate.swift in Sources */,
 				E8B9E251254B13A700D3D8AC /* UIViewController+alert.swift in Sources */,
+				E81A82AE255AF9A8009CD33D /* UIView+addBorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
