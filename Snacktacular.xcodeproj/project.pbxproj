@@ -17,6 +17,7 @@
 		E81A82AE255AF9A8009CD33D /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A82AD255AF9A8009CD33D /* UIView+addBorder.swift */; };
 		E81A82B0255AFAC9009CD33D /* UIBarButtonItem+hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A82AF255AFAC9009CD33D /* UIBarButtonItem+hide.swift */; };
 		E81A82B2255B474C009CD33D /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A82B1255B474C009CD33D /* PhotoViewController.swift */; };
+		E81A82B4255C35B4009CD33D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A82B3255C35B4009CD33D /* Photo.swift */; };
 		E8B9E245254866E700D3D8AC /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9E244254866E700D3D8AC /* SpotListViewController.swift */; };
 		E8B9E2472548682400D3D8AC /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9E2462548682400D3D8AC /* SpotTableViewCell.swift */; };
 		E8B9E24925486C2400D3D8AC /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9E24825486C2400D3D8AC /* SpotDetailViewController.swift */; };
@@ -46,6 +47,7 @@
 		E81A82AD255AF9A8009CD33D /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
 		E81A82AF255AFAC9009CD33D /* UIBarButtonItem+hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+hide.swift"; sourceTree = "<group>"; };
 		E81A82B1255B474C009CD33D /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		E81A82B3255C35B4009CD33D /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		E8B9E244254866E700D3D8AC /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
 		E8B9E2462548682400D3D8AC /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
 		E8B9E24825486C2400D3D8AC /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				E8B9E252254F3E4800D3D8AC /* Spots.swift */,
 				E8B9E27E25544D9E00D3D8AC /* Review.swift */,
 				E8B9E2802554502400D3D8AC /* Reviews.swift */,
+				E81A82B3255C35B4009CD33D /* Photo.swift */,
 				E818827B2547B98100B24F73 /* LoginViewController.swift */,
 				E8B9E244254866E700D3D8AC /* SpotListViewController.swift */,
 				E8B9E2462548682400D3D8AC /* SpotTableViewCell.swift */,
@@ -282,6 +285,7 @@
 				E8B9E2472548682400D3D8AC /* SpotTableViewCell.swift in Sources */,
 				E81A82B2255B474C009CD33D /* PhotoViewController.swift in Sources */,
 				E8B9E2832558665F00D3D8AC /* SpotReviewTableViewCell.swift in Sources */,
+				E81A82B4255C35B4009CD33D /* Photo.swift in Sources */,
 				E8B9E255254F4C5E00D3D8AC /* APIKeys.swift in Sources */,
 				E8B9E24B254A08DF00D3D8AC /* Spot.swift in Sources */,
 				E818827A2547B98100B24F73 /* SceneDelegate.swift in Sources */,
