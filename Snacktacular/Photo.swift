@@ -54,4 +54,52 @@ class Photo {
        self.init(image: UIImage(), description: description, photoUserID: photoUserID, photoUserEmail: photoUserEmail, date: date, photoURL: photoURL, documentID: "")
     }
     
+    
+    func saveData(spot: Spot, completion: @escaping (Bool) -> ()) {
+        let db = Firestore.firestore()
+        let storage = Storage.storage()
+        
+        guard let photoData = self.image.jpegData(compressionQuality: 0.5) else {
+            print("Error: could not convert photo.image to data")
+            return
+        }
+        
+        let uploadMetaData = StorageMetadata()
+        uploadMetaData.contentType = "image/jpeg"
+        
+        if documentID == "" {
+            documentID = UUID().uuidString
+        }
+        
+            let storageRef = storage.reference().child(spot.documentID).child(documentID)
+            
+            let uploadTask = storageRef.putData(photoData, metadata: uploadMetaData) { (metadata, error) in
+                if let error = error {
+                    print("Error: upload for ref \(uploadMetaData) failed. \(error.localizedDescription)")
+                }
+            }
+        uploadTask.observe(.success) { (snapshot) in
+            print("Upload to firebase storage was successful")
+            let dataToSave: [String: Any] = self.dictionary
+            let ref = db.collection("spots").document(spot.documentID).collection("photos").document(self.documentID)
+            ref.setData(dataToSave) { (error) in
+                guard error == nil else {
+                    return completion(false)
+                    print("ERROR: Updating document \(error!.localizedDescription) in spot: \(spot.documentID)")
+                }
+                print("Updated document \(self.documentID)")
+                completion(true)
+            }
+        }
+        uploadTask.observe(.failure) { (snapshot) in
+            if let error = snapshot.error {
+                print("Error: upload task for file \(self.documentID) failed, in spot \(spot.documentID), with error \(error.localizedDescription)")
+                
+            }
+            completion(false)
+        }
+            
+    }
+    
 }
+
