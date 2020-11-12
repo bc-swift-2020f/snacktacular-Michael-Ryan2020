@@ -25,12 +25,14 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
     
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var spot: Spot!
     var photo: Photo!
     let regionDistance: CLLocationDegrees = 750.0
     var locationManager: CLLocationManager!
     var reviews: Reviews!
+    var photos: Photos!
     var imagePickerController = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,8 @@ class SpotDetailViewController: UIViewController {
         self.view.addGestureRecognizer(tap)
         tableView.delegate = self
         tableView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
         imagePickerController.delegate = self
         getLocation()
         if spot == nil {
@@ -52,6 +56,7 @@ class SpotDetailViewController: UIViewController {
         }
         setupMapView()
         reviews = Reviews()
+        photos = Photos()
         updateUserInterface()
 
     }
@@ -63,6 +68,9 @@ class SpotDetailViewController: UIViewController {
         }
         reviews.loadData(spot: spot) {
             self.tableView.reloadData()
+        }
+        photos.loadData(spot: spot) {
+            self.collectionView.reloadData()
         }
     }
     func setupMapView() {
@@ -110,6 +118,11 @@ class SpotDetailViewController: UIViewController {
             destination.photo = photo
         case "ShowPhoto":
             let destination = segue.destination as! PhotoViewController
+            guard let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first else {
+                print("Error couldn't get selected collectionView item")
+                return
+            }
+            destination.photo = photos.photoArray[selectedIndexPath.row]
 //            let selectedIndexPath = tableView.indexPathForSelectedRow!
 //            destination.review = reviews.reviewArray[selectedIndexPath.row]
             destination.spot = spot
@@ -318,6 +331,20 @@ extension SpotDetailViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath) as! SpotReviewTableViewCell
         cell.review = reviews.reviewArray[indexPath.row]
         return cell
+    }
+    
+    
+}
+extension SpotDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photos.photoArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let photoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! SpotPhotoCollectionViewCell
+        photoCell.spot = spot 
+        photoCell.photo = photos.photoArray[indexPath.row]
+        return photoCell
     }
     
     
