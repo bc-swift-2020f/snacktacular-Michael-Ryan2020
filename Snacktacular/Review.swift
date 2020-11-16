@@ -67,7 +67,9 @@ class Review {
                 }
                 self.documentID = ref!.documentID
                 print("Added document \(self.documentID) to spot \(spot.documentID)")
-                completion(true)
+                spot.updateAvgRating {
+                    completion(true)
+                }
             }
         } else {
             let ref = db.collection("spots").document(spot.documentID).collection("reviews").document(self.documentID)
@@ -77,7 +79,9 @@ class Review {
                     print("ERROR: Updating document \(error!.localizedDescription) in spot: \(spot.documentID)")
                 }
                 print("Updated document \(self.documentID)")
-                completion(true)
+                 spot.updateAvgRating {
+                                   completion(true)
+                               }
             }
         }
 
@@ -90,7 +94,9 @@ class Review {
                 completion(false)
             } else {
                 print("Successfuly deleted document \(self.documentID)")
-                completion(true)
+                 spot.updateAvgRating {
+                                   completion(true)
+                               }
             }
         }
     }
