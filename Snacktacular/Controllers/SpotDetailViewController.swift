@@ -135,7 +135,7 @@ class SpotDetailViewController: UIViewController {
 //            destination.review = reviews.reviewArray[selectedIndexPath.row]
             destination.spot = spot
         default:
-            print("Couldn't find a case for segue identifier \(segue.identifier). Shouldn't have happened")
+            print("Couldn't find a case for segue identifier. Shouldn't have happened")
         }
     }
     func saveCancelAlert(title: String, message: String, segueIdentifier: String) {

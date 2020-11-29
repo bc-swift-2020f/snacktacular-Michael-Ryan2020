@@ -126,6 +126,22 @@
 			children = (
 				E81882772547B98100B24F73 /* AppDelegate.swift */,
 				E81882792547B98100B24F73 /* SceneDelegate.swift */,
+				E8A14E0F2574203D00D978F6 /* Models */,
+				E8A14E10257420AA00D978F6 /* Controllers */,
+				E8A14E11257420D500D978F6 /* Views */,
+				E8A14E122574213200D978F6 /* Utilities  */,
+				E818827D2547B98100B24F73 /* Main.storyboard */,
+				E81882802547B98400B24F73 /* Assets.xcassets */,
+				E81882822547B98400B24F73 /* LaunchScreen.storyboard */,
+				E81882852547B98400B24F73 /* Info.plist */,
+				E8B9E24E254B086200D3D8AC /* GoogleService-Info.plist */,
+			);
+			path = Snacktacular;
+			sourceTree = "<group>";
+		};
+		E8A14E0F2574203D00D978F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				E8B9E24A254A08DF00D3D8AC /* Spot.swift */,
 				E8B9E252254F3E4800D3D8AC /* Spots.swift */,
 				E8B9E27E25544D9E00D3D8AC /* Review.swift */,
@@ -134,27 +150,43 @@
 				E81A82B5255D86DF009CD33D /* Photos.swift */,
 				E883DF172574075F001B4D69 /* SnackUser.swift */,
 				E883DF1D257415CA001B4D69 /* SnackUsers.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E8A14E10257420AA00D978F6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				E818827B2547B98100B24F73 /* LoginViewController.swift */,
 				E8B9E244254866E700D3D8AC /* SpotListViewController.swift */,
-				E8B9E2462548682400D3D8AC /* SpotTableViewCell.swift */,
 				E8B9E24825486C2400D3D8AC /* SpotDetailViewController.swift */,
-				E8B9E2822558665F00D3D8AC /* SpotReviewTableViewCell.swift */,
-				E81A82B7255D8967009CD33D /* SpotPhotoCollectionViewCell.swift */,
 				E8B9E27C2553A79700D3D8AC /* ReviewTableViewController.swift */,
 				E81A82B1255B474C009CD33D /* PhotoViewController.swift */,
 				E883DF192574138A001B4D69 /* SnackUserViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E8A14E11257420D500D978F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8B9E2462548682400D3D8AC /* SpotTableViewCell.swift */,
+				E8B9E2822558665F00D3D8AC /* SpotReviewTableViewCell.swift */,
+				E81A82B7255D8967009CD33D /* SpotPhotoCollectionViewCell.swift */,
 				E883DF1B257413F1001B4D69 /* SnackUserTableViewCell.swift */,
-				E818827D2547B98100B24F73 /* Main.storyboard */,
-				E81882802547B98400B24F73 /* Assets.xcassets */,
-				E81882822547B98400B24F73 /* LaunchScreen.storyboard */,
-				E81882852547B98400B24F73 /* Info.plist */,
-				E8B9E24E254B086200D3D8AC /* GoogleService-Info.plist */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E8A14E122574213200D978F6 /* Utilities  */ = {
+			isa = PBXGroup;
+			children = (
 				E8B9E250254B13A700D3D8AC /* UIViewController+alert.swift */,
 				E81A82AD255AF9A8009CD33D /* UIView+addBorder.swift */,
 				E81A82AF255AFAC9009CD33D /* UIBarButtonItem+hide.swift */,
 				E8B9E254254F4C5E00D3D8AC /* APIKeys.swift */,
 			);
-			path = Snacktacular;
+			path = "Utilities ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
